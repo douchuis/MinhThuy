@@ -61,12 +61,12 @@
         ];
         
         var listSongName = [
-            "Anh se cuoi em",
-            "Em la dai duong cua anh",
-            "Dau bac chan long",
-            "Chi co em !!!",
-            "tinh yeu nolimit",
-            "Chung ta la mot!!!"
+            "Anh se cuoi em hihihi :) ",
+            "Em la dai duong cua anh !!! SURE",
+            "Dau bac chan long !!! SURE luon",
+            "Chi co em !!! ONLY ONE",
+            "tinh yeu nolimit !!! OF COURSE :) ",
+            "Chung ta la mot!!! NO QUESTION :)"
            
         ];
         
@@ -113,6 +113,14 @@
         function play() {
             song.play();
             myFunction(x);
+            song.addEventListener('ended', function () {
+                this.currentTime = 0;
+                x = Math.floor((Math.random() * (nbList)));
+                song.src = listSong[x];
+                song.play();
+                myFunction(x);
+            },false);
+            song.play();
         }
         
         // play random
