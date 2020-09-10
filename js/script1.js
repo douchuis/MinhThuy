@@ -53,22 +53,20 @@ function realtimeClock() {
     document.getElementById('clock').innerHTML=
         hour + " : " + minute + " : " + seconde + " " + amPm ;
     var t = setTimeout(realtimeClock, 500);
-
 }function setBgGreet() {
     let today = new Date(),
         hour = today.getHours();
-
     if(hour <12) {
-        greeting.textContent = 'Good Morning Minh Thuy ! Chuc Em Yeu mot ngay vui ve !!! ';
+        greeting.textContent = 'Yes! All the best for ya Thuy (:-:)  !!! ';
  
     
 
-    }else if ((hour > 12) && (hour<18)){
+    }else if (hour < 18){
         greeting.textContent = "Good Afternoon EM Yeu !!!";
-    }else if((hour > 22) && (hour < 24)){
-        greeting.textContent = "Time for bed, Right ?";
-    }else {
+    }else if(hour < 22){
         greeting.textContent = "Good Evening Minh Thuy ! I miss u nhieu nhieu :) !!!";
+    }else{
+        greeting.textContent = "Em còn làm ma đêm nữa à ! Ngủ đi baby !";
     }
     greeting = document.getElementById('greeting');
 }
