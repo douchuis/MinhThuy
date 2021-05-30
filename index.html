@@ -87,10 +87,10 @@
             myFunction(x);
             song.play(); 
         }, true);
-        song.src =listSong[x];
+        song.src =listSong[x].play();
 
         function myFunction(x) {
-            document.getElementById("songName").innerHTML = listSongName[x].play();
+            document.getElementById("songName").innerHTML = listSongName[x];
         }
         
         function skip(time) {
