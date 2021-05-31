@@ -83,7 +83,8 @@
             this.currentTime = 0;
             x = Math.floor((Math.random() * (nbList)));
             song.src = listSong[x];
-            song.play();
+            //song.play();
+            song.autoplay =true;
             myFunction(x);
             song.play(); 
         }, true);
